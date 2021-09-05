@@ -11,7 +11,7 @@ const msg = new nanobuffer(50);
 const getMsgs = () => Array.from(msg).reverse();
 
 msg.push({
-  user: "brian?",
+  user: "dan?",
   text: "hi",
   time: Date.now(),
 });

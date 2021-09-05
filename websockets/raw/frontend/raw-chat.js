@@ -20,6 +20,10 @@ ws.addEventListener("message", (event) => {
   render();
 });
 
+ws.addEventListener("close", () => {
+  presence.innerText = "🔴";
+});
+
 chat.addEventListener("submit", function (e) {
   e.preventDefault();
   postNewMsg(chat.elements.user.value, chat.elements.text.value);

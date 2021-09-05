@@ -10,7 +10,7 @@ const msg = new nanobuffer(50);
 const getMsgs = () => Array.from(msg).reverse();
 
 msg.push({
-  user: "brian",
+  user: "woofer",
   text: "hi",
   time: Date.now(),
 });
@@ -48,7 +48,6 @@ server.on("upgrade", function (req, socket) {
   socket.on("data", (buffer) => {
     const message = parseMessage(buffer);
     if (message) {
-      console.log(message);
       msg.push({
         user: message.user,
         text: message.text,
